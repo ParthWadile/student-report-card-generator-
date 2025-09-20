@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Report Card Generator</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f8ff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 80vh;
+        margin: 0;
+    }
+
+    h1 {
+        color: #f20c0c;
+        margin-bottom: 20px;
+        font-weight: bold;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 4px #999;
+    }
+
+    button:hover {
+        background-color: #45a049;
+    }
+
+    #result {
+        font-size: 20px;
+        margin-top: 20px;
+        color: rgb(0, 0, 0);
+    }
+</style>
+
+<body>
+
+    <h1>STUDENT REPORT CARD GENERATOR</h1>
+    <button onclick="report()">Report</button>
+    <div id="result"></div>
+    <script>
+        function report() {
+            let name = prompt("Enter Student Name:");
+            let maths = parseInt(prompt("Enter the Maths Subject Marks"));
+            let science = parseInt(prompt("Enter the Science Subject Marks"));
+            let english = parseInt(prompt("Enter the English Subject Marks"));
+            let result = "";
+
+            result += "<b> Student Name: " + name + "</b><br><br>";
+
+            // Maths Grade
+            if (maths >= 75) {
+                result += "Maths: GRADE A+<br>";
+            }
+            else if (maths >= 60) {
+                result += "Maths: GRADE B<br>";
+            }
+            else if (maths >= 50) {
+                result += "Maths: GRADE B+<br>";
+            }
+            else if (maths < 30) {
+                result += "Maths: Pass<br>";
+            }
+            else {
+                result += "Maths: Fail<br>";
+            }
+
+            // Science Grade
+            if (science >= 75) {
+                result += "Science: GRADE A+<br>";
+            }
+            else if (science >= 60) {
+                result += "Science: GRADE B<br>";
+            }
+            else if (science >= 50) {
+                result += "Science: GRADE B+<br>";
+            }
+            else if (science < 30) {
+                result += "Science: Pass<br>";
+            }
+            else {
+                result += "Science: Fail<br>";
+            }
+
+            // English Grade
+            if (english >= 75) {
+                result += "English: GRADE A+<br>";
+            }
+            else if (english >= 60) {
+                result += "English: GRADE B<br>";
+            }
+            else if (english >= 50) {
+                result += "English: GRADE B+<br>";
+            }
+            else if (english < 30) {
+                result += "English: Pass<br>";
+            }
+            else {
+                result += "English: Fail<br>";
+            }
+            let total = maths + science + english;
+            let percentage = (total * 100) / 300;
+            result += "Percentage: " + percentage + " % ";
+            document.getElementById("result").innerHTML = result;
+        }
+
+    </script>
+</body>
+
+</html>
