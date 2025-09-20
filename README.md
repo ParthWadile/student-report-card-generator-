@@ -48,6 +48,12 @@ Student-Report-Card-Generator <br>
 
 📊 Percentage: 63.00 %
 
-
+<!-- Author Section -->
+<section id="author" style="text-align:center; padding:50px; background-color:#f0f8ff; font-family:Arial, sans-serif;">
+    <h2 style="font-size:28px; color:#4CAF50;">🧑‍💻 Author</h2>
+    <p style="font-size:22px; margin:10px 0;">👤 <strong>Parth Wadile</strong></p>
+    <p style="font-size:18px; color:#555;">💻 Computer Engineering Student | 🌟 Web Development Enthusiast</p>
+    <p style="margin-top:15px;">
+    </section>
 
 
